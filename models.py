@@ -43,7 +43,7 @@ class Grade(Base):
     subject = relationship("Subject", back_populates="grades")
 
 # Підключення до PostgreSQL через Docker
-DATABASE_URL = "postgresql://myuser:123456@localhost:5432/mydatabase"
+DATABASE_URL = "postgresql://postgres:123456@localhost:5432/postgres"
 engine = create_engine(DATABASE_URL)
 Base.metadata.create_all(engine)
 
